@@ -6,7 +6,6 @@ struct ListNode {
  	struct ListNode *next;
 };
 
-/**/
 struct ListNode*	mergeLists(struct ListNode* list1, struct ListNode* list2) {
 	struct ListNode* temp = list1;
 	while (temp->next != NULL)
@@ -54,22 +53,22 @@ struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {
 	return (sortList(head));
 }
 
-// int	main(void)
-// {
-// 	struct ListNode *sorted;
-// 	struct ListNode c = { 4, NULL};
-// 	struct ListNode b = { 2, &c };
-// 	struct ListNode a = { 1, &b };
-//  	struct ListNode *list1 = &a;
-// 	struct ListNode l3 = { 4, NULL};
-// 	struct ListNode l2 = { 3, &l3 };
-// 	struct ListNode l1 = { 1, &l2 };
-//  	struct ListNode *list2 = &l1;
-// 	sorted = mergeTwoLists(list1, list2);
-// 	while (sorted->next != NULL)
-// 	{
-// 		printf("%d ", sorted->val);
-// 		sorted = sorted->next;
-// 	}
-// 	return (0);
-// }
+int	main(void)
+{
+	struct ListNode *sorted;
+	struct ListNode c = { 4, NULL};
+	struct ListNode b = { 2, &c };
+	struct ListNode a = { 1, &b };
+ 	struct ListNode *list1 = &a;
+	struct ListNode l3 = { 4, NULL};
+	struct ListNode l2 = { 3, &l3 };
+	struct ListNode l1 = { 1, &l2 };
+ 	struct ListNode *list2 = &l1;
+	sorted = mergeTwoLists(list1, list2);
+	while (sorted->next != NULL)
+	{
+		printf("%d ", sorted->val);
+		sorted = sorted->next;
+	}
+	return (0);
+}
