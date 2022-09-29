@@ -21,7 +21,7 @@ class ListNode(object):
 
 class Solution(object):
     def reverseList(self, head):
-        if (head == None):
+    	if (head == None):
             return head
             
         if (head.next == None):
