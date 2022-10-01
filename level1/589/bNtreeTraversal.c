@@ -20,16 +20,3 @@ int* preorder(struct Node* root, int* returnSize) {
     *returnSize = indx;
     return (arr);
 }
-
-
-        res = list()
-        stk = list()
-        if root != None:
-            stk.append(root)
-        while len(stk) > 0:
-            node = stk.pop()
-            res.append(node.val)
-            node.children.reverse()
-            for n in node.children:
-                stk.append(n)
-        return res
