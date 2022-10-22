@@ -22,3 +22,12 @@ private:
         dfs(x + 1, y, image, initColor, color);
     }
 };
+
+
+int** floodFill(int** image, int imageSize, int* imageColSize, int sr, int sc, int newColor, int* returnSize, int** returnColumnSizes){
+    checkImage(image, imageSize, *imageColSize, sr, sc, image[sr][sc], newColor);
+    *returnSize = imageSize; 
+    *returnColumnSizes = (int *)malloc(imageSize*sizeof(int));
+    for(int i=0; i<imageSize; i++) (*returnColumnSizes)[i] = *imageColSize;
+    return image;
+}
