@@ -59,20 +59,3 @@ int main(void)
     }
     return (0);
 }
-
-class Solution:
-    def findAnagrams(self, s: str, p: str) -> List[int]:
-        countP = collections.Counter(p)
-        currentCounter = collections.Counter(s[:len(p)])
-        ans = []
-        if countP == currentCounter: ans = [0]
-        for i in range(len(p),len(s)):
-            toberemoved = currentCounter[s[i-len(p)]]
-            if toberemoved == 1:
-                del currentCounter[s[i-len(p)]]  
-            else:
-                currentCounter[s[i-len(p)]]  -= 1 
-            currentCounter[s[i]] += 1
-            if currentCounter == countP:
-                ans.append(i-len(p)+1)
-        return ans
